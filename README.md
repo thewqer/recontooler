@@ -16,6 +16,7 @@ This tool installs:
 ## Installation
 
 Version v0.1
+
 This version has been optimized for Raspberry Pi OS. It can also run on some Debian based distributions.
 
 Clone the bash script into your home directory, then just run as sudo.
