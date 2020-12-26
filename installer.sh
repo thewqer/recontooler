@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION="0.1.2"
+VERSION="0.1.3"
 LINE="------------"
 
 echo -e "                 
@@ -34,7 +34,6 @@ cd tools || return
 git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
 cd sqlmap-dev
 sudo printf "%s\n" "alias sqlmap="python3 "$HOME"/tools/sqlmap-dev/sqlmap.py"" >> ~/.bashrc
-source ~/.bashrc
 cd "$HOME" || return 
 
 echo "Installing XSSer"
@@ -64,7 +63,6 @@ cd Sublist3r* || return
 sudo pip3 install -r requirements.txt
 cd "$HOME" || return 
 sudo printf "%s\n" "alias sublister="python3 "$HOME"/tools/Sublist3r/sublist3r.py"" >> ~/.bashrc
-source ~/.bashrc
 echo " SET YOUR OWN API KEYS IN THE CONFIG FILE"
 
 echo "Installing XSStrike"
@@ -74,7 +72,6 @@ cd XSStrike || return
 sudo pip3 install requirements.txt
 cd "$HOME" || return
 sudo printf "%s\n" "alias xsstrike="python3 "$HOME"/tools/XSStrike/xsstrike.py"" >> ~/.bashrc
-source ~/.bashrc
 
 echo "DONE"
 echo $LINE
@@ -120,5 +117,8 @@ echo "--- Installing wordlists ---"
 mkdir /usr/share/wordlists
 git clone --depth 1 https://github.com/danielmiessler/SecLists.git
 sudo cp SecLists /usr/share/wordlists
+
+echo "--- One last step: Reloading bashrc ---"
+source ~/.bashrc
 
 echo "ALL DONE"
