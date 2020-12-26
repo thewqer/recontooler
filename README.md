@@ -22,7 +22,9 @@ This version has been optimized for Raspberry Pi OS. It can also run on some Deb
 Clone the bash script into your home directory, then just run as sudo.
 
 `git clone https://github.com/thewqer/recontooler/ `
+
 `cd recontooler`
+
 `sudo bash installer.sh`
 
 After the installation you need to set your API keys for Sublist3r and Knockpy`
