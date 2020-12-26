@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION="0.1"
+VERSION="0.1.2"
 LINE="------------"
 
 echo -e "                 
@@ -33,7 +33,7 @@ echo "Installing SQLmap"
 cd tools || return
 git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
 cd sqlmap-dev
-sudo printf "%s\n" "alias sublister="python3 "$HOME"/tools/sqlmap-dev/sqlmap.py"" >> ~/.bashrc
+sudo printf "%s\n" "alias sqlmap="python3 "$HOME"/tools/sqlmap-dev/sqlmap.py"" >> ~/.bashrc
 source ~/.bashrc
 cd "$HOME" || return 
 
@@ -73,7 +73,7 @@ git clone https://github.com/s0md3v/XSStrike
 cd XSStrike || return 
 sudo pip3 install requirements.txt
 cd "$HOME" || return
-sudo printf "%s\n" "alias sublister="python3 "$HOME"/tools/XSStrike/"" >> ~/.bashrc
+sudo printf "%s\n" "alias xsstrike="python3 "$HOME"/tools/XSStrike/xsstrike.py"" >> ~/.bashrc
 source ~/.bashrc
 
 echo "DONE"
@@ -119,6 +119,6 @@ echo "--- Installing wordlists ---"
 
 mkdir /usr/share/wordlists
 git clone --depth 1 https://github.com/danielmiessler/SecLists.git
-cp SecLists /usr/share/wordlists
+sudo cp SecLists /usr/share/wordlists
 
 echo "ALL DONE"
