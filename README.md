@@ -15,7 +15,7 @@ This tool installs:
 
 ## Installation
 
-Version v0.1.3
+Version v0.1.4
 
 This version has been optimized for Raspberry Pi OS. It can also run on some Debian based distributions.
 
