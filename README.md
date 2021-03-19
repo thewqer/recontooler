@@ -27,4 +27,4 @@ Clone the bash script into your home directory, then just run as sudo.
 
 `sudo bash installer.sh`
 
-After the installation you need to set your API keys for Sublist3r and Knockpy`
+After the installation you need to set your API keys for Sublist3r, Knockpy and Amass`
