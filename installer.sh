@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION="0.1.3"
+VERSION="0.1.4"
 LINE="------------"
 
 echo -e "                 
@@ -62,7 +62,6 @@ git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r* || return 
 sudo pip3 install -r requirements.txt
 cd "$HOME" || return 
-sudo printf "%s\n" "alias sublister="python3 "$HOME"/tools/Sublist3r/sublist3r.py"" >> ~/.bashrc
 echo " SET YOUR OWN API KEYS IN THE CONFIG FILE"
 
 echo "Installing XSStrike"
@@ -71,7 +70,6 @@ git clone https://github.com/s0md3v/XSStrike
 cd XSStrike || return 
 sudo pip3 install requirements.txt
 cd "$HOME" || return
-sudo printf "%s\n" "alias xsstrike="python3 "$HOME"/tools/XSStrike/xsstrike.py"" >> ~/.bashrc
 
 echo "DONE"
 echo $LINE
@@ -117,8 +115,5 @@ echo "--- Installing wordlists ---"
 mkdir /usr/share/wordlists
 git clone --depth 1 https://github.com/danielmiessler/SecLists.git
 sudo cp SecLists /usr/share/wordlists
-
-echo "--- One last step: Reloading bashrc ---"
-source ~/.bashrc
 
 echo "ALL DONE"
